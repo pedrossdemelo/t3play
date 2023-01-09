@@ -3,11 +3,13 @@ import { Suspense } from "react";
 
 async function getData() {
   // await 3 seconds
+  const start= Date.now();
   await new Promise((resolve) => setTimeout(resolve, 8000));
+  const timeItTook = Date.now() - start;
 
   return {
     data: {
-      greeting: "Hello World!",
+      greeting: `response sent at ${new Date().toISOString()}}. Waited ${timeItTook}ms`,
     },
   };
 }
