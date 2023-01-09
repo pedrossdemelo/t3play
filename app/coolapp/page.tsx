@@ -3,7 +3,7 @@ import { Suspense } from "react";
 
 async function getData() {
   // await 3 seconds
-  await new Promise((resolve) => setTimeout(resolve, 5000));
+  await new Promise((resolve) => setTimeout(resolve, 8000));
 
   return {
     data: {
